@@ -1,1 +1,5 @@
-{"name": "don-or-landing", "version": 2, "public": true, "buildCommand": "echo 'Static site, no build needed'"}
+{
+  "buildCommand": "echo 'Static HTML site'",
+  "outputDirectory": "public",
+  "installCommand": "echo 'No install needed'"
+}
