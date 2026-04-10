@@ -7,149 +7,260 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <!-- Navbar -->
     <header class="navbar">
         <div class="container">
             <div class="navbar-brand">
-                <h1>🌊 Don Or</h1>
-                <p class="subtitle">Cocina Mediterránea Auténtica</p>
+                <div class="logo-animated">🌊</div>
+                <div>
+                    <h1>Don Or</h1>
+                    <p class="subtitle">Cocina Mediterránea Auténtica</p>
+                </div>
             </div>
             <nav class="nav-links">
-                <a href="#sobre">Sobre Nosotros</a>
-                <a href="#reservas">Reservar</a>
-                <a href="#contacto">Contacto</a>
+                <a href="#sobre" class="nav-link">Sobre Nosotros</a>
+                <a href="#reservas" class="nav-link cta-nav">Reservar</a>
             </nav>
         </div>
     </header>
 
+    <!-- Hero Interactivo -->
     <section class="hero">
-        <div class="hero-content">
-            <h2>Bienvenido a Don Or</h2>
-            <p>Sabores auténticos del Mediterráneo en el corazón de Cala d'Or</p>
-            <a href="#reservas" class="cta-button">Reservar Mesa</a>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title fade-in">Bienvenido a Don Or</h2>
+                <p class="hero-subtitle fade-in-delay">Donde el mar, la tradición y la innovación se encuentran</p>
+                <div class="hero-buttons">
+                    <a href="#reservas" class="btn btn-primary btn-lg">Reservar Ahora</a>
+                    <a href="#sobre" class="btn btn-secondary btn-lg">Descubre Más</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="wave wave1"></div>
+                <div class="wave wave2"></div>
+                <div class="wave wave3"></div>
+            </div>
         </div>
     </section>
 
+    <!-- Sección Sobre Nosotros -->
     <section id="sobre" class="about">
         <div class="container">
-            <h2>Nuestra Filosofía</h2>
+            <h2 class="section-title">Nuestra Filosofía</h2>
             <div class="about-grid">
-                <div class="about-card">
-                    <span class="icon">🍽️</span>
+                <div class="about-card card-1">
+                    <div class="card-icon">🍽️</div>
                     <h3>Ingredientes Frescos</h3>
                     <p>Productos locales de la más alta calidad, directamente de pescadores y productores de la zona.</p>
                 </div>
-                <div class="about-card">
-                    <span class="icon">👨‍🍳</span>
+                <div class="about-card card-2">
+                    <div class="card-icon">👨‍🍳</div>
                     <h3>Maestría Culinaria</h3>
                     <p>Recetas tradicionales combinadas con técnicas modernas para crear experiencias memorables.</p>
                 </div>
-                <div class="about-card">
-                    <span class="icon">🌅</span>
+                <div class="about-card card-3">
+                    <div class="card-icon">🌅</div>
                     <h3>Ambiente Exclusivo</h3>
                     <p>Vistas espectaculares al mar y una atmósfera que invita a disfrutar del momento.</p>
                 </div>
-                <div class="about-card">
-                    <span class="icon">⚡</span>
-                    <h3>Asistente IA 24/7</h3>
-                    <p>Respuestas instantáneas a tus preguntas y reservas sin esperas. Disponible siempre.</p>
+                <div class="about-card card-4">
+                    <div class="card-icon">⚡</div>
+                    <h3>IA 24/7</h3>
+                    <p>Tu asistente personal disponible siempre. Respuestas instantáneas, sin esperas.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Formulario Multistep -->
     <section id="reservas" class="reservas-section">
         <div class="container">
-            <h2>Reservar Tu Mesa</h2>
-            <p class="section-subtitle">Nuestro asistente IA te confirmará al instante</p>
+            <h2 class="section-title">Reservar Tu Experiencia</h2>
+            <p class="section-subtitle">Solo 3 pasos para confirmar tu mesa</p>
             
-            <form id="reservaForm" class="reserva-form">
-                <div class="form-group">
-                    <label for="nombre">Nombre Completo</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            <div class="reservation-container">
+                <!-- Progress Bar -->
+                <div class="progress-bar">
+                    <div class="progress-step active" data-step="1">
+                        <span>1</span>
+                        <p>Detalles</p>
                     </div>
-                    <div class="form-group">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" required placeholder="+34 XXX XXX XXX">
+                    <div class="progress-line active"></div>
+                    <div class="progress-step" data-step="2">
+                        <span>2</span>
+                        <p>Fecha & Hora</p>
                     </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="fecha">Fecha</label>
-                        <input type="date" id="fecha" name="fecha" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="hora">Hora</label>
-                        <input type="time" id="hora" name="hora" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="personas">Personas</label>
-                        <select id="personas" name="personas" required>
-                            <option value="">Seleccionar</option>
-                            <option value="1">1 Persona</option>
-                            <option value="2">2 Personas</option>
-                            <option value="3">3 Personas</option>
-                            <option value="4">4 Personas</option>
-                            <option value="5">5 Personas</option>
-                            <option value="6">6 Personas</option>
-                            <option value="7">7 Personas</option>
-                            <option value="8">8+ Personas</option>
-                        </select>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="3">
+                        <span>3</span>
+                        <p>Confirmar</p>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="notas">Notas Especiales</label>
-                    <textarea id="notas" name="notas" placeholder="Alergias, preferencias..."></textarea>
+                <!-- Formulario Multistep -->
+                <form id="reservaForm" class="reserva-form-multistep">
+                    
+                    <!-- STEP 1: Detalles Personales -->
+                    <div class="form-step active" data-step="1">
+                        <h3>Cuéntanos sobre ti</h3>
+                        
+                        <div class="form-group">
+                            <label for="nombre">¿Cómo te llamas?</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" class="input-animated">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Tu Email</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com" class="input-animated">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono de Contacto</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="+34 XXX XXX XXX" class="input-animated">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="personas">¿Cuántas personas?</label>
+                            <div class="personas-selector">
+                                <button type="button" class="persona-btn" data-value="1">1</button>
+                                <button type="button" class="persona-btn" data-value="2">2</button>
+                                <button type="button" class="persona-btn" data-value="3">3</button>
+                                <button type="button" class="persona-btn" data-value="4">4</button>
+                                <button type="button" class="persona-btn" data-value="5">5</button>
+                                <button type="button" class="persona-btn" data-value="6">6+</button>
+                            </div>
+                            <input type="hidden" id="personas" name="personas" required>
+                        </div>
+
+                        <button type="button" class="btn btn-primary btn-next" data-step="1">Siguiente →</button>
+                    </div>
+
+                    <!-- STEP 2: Fecha y Hora -->
+                    <div class="form-step" data-step="2">
+                        <h3>¿Cuándo quieres venir?</h3>
+                        
+                        <div class="form-group">
+                            <label for="fecha">Fecha Deseada</label>
+                            <input type="date" id="fecha" name="fecha" required class="input-animated">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hora">Hora Preferida</label>
+                            <div class="time-selector">
+                                <button type="button" class="time-btn" data-value="13:00">13:00</button>
+                                <button type="button" class="time-btn" data-value="13:30">13:30</button>
+                                <button type="button" class="time-btn" data-value="14:00">14:00</button>
+                                <button type="button" class="time-btn" data-value="19:00">19:00</button>
+                                <button type="button" class="time-btn" data-value="19:30">19:30</button>
+                                <button type="button" class="time-btn" data-value="20:00">20:00</button>
+                                <button type="button" class="time-btn" data-value="20:30">20:30</button>
+                                <button type="button" class="time-btn" data-value="21:00">21:00</button>
+                            </div>
+                            <input type="hidden" id="hora" name="hora" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notas">Notas Especiales (Opcional)</label>
+                            <textarea id="notas" name="notas" placeholder="Alergias, preferencias, cumpleaños..." class="input-animated"></textarea>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-secondary btn-prev" data-step="2">← Atrás</button>
+                            <button type="button" class="btn btn-primary btn-next" data-step="2">Revisar →</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Confirmación -->
+                    <div class="form-step" data-step="3">
+                        <h3>Resumen de tu Reserva</h3>
+                        
+                        <div class="summary-box">
+                            <div class="summary-item">
+                                <span class="label">Nombre:</span>
+                                <span class="value" id="summary-nombre">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Email:</span>
+                                <span class="value" id="summary-email">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Teléfono:</span>
+                                <span class="value" id="summary-telefono">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Personas:</span>
+                                <span class="value" id="summary-personas">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Fecha:</span>
+                                <span class="value" id="summary-fecha">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Hora:</span>
+                                <span class="value" id="summary-hora">-</span>
+                            </div>
+                            <div class="summary-item" id="summary-notas-container" style="display:none;">
+                                <span class="label">Notas:</span>
+                                <span class="value" id="summary-notas">-</span>
+                            </div>
+                        </div>
+
+                        <p class="form-note">✓ Recibirás confirmación instantánea por email y SMS</p>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-secondary btn-prev" data-step="3">← Atrás</button>
+                            <button type="submit" class="btn btn-success btn-submit">Confirmar Reserva ✓</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <!-- Mensajes de Éxito/Error -->
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <div class="success-icon">✅</div>
+                    <h3>¡Reserva Confirmada!</h3>
+                    <p>Tu mesa está reservada. Te enviaremos los detalles por email.</p>
+                    <button type="button" class="btn btn-primary" onclick="location.reload()">Hacer otra Reserva</button>
                 </div>
 
-                <button type="submit" class="submit-button">Confirmar Reserva</button>
-                <p class="form-note">ℹ️ Recibirás confirmación instantánea</p>
-            </form>
-
-            <div id="successMessage" class="success-message" style="display: none;">
-                <h3>✅ ¡Reserva Confirmada!</h3>
-                <p>Tu mesa está reservada.</p>
-            </div>
-
-            <div id="errorMessage" class="error-message" style="display: none;">
-                <h3>❌ Error</h3>
-                <p id="errorText"></p>
+                <div id="errorMessage" class="error-message" style="display: none;">
+                    <div class="error-icon">⚠️</div>
+                    <h3>Error al Procesar</h3>
+                    <p id="errorText"></p>
+                    <button type="button" class="btn btn-secondary" onclick="resetForm()">Intentar de Nuevo</button>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Contacto -->
     <section id="contacto" class="contact">
         <div class="container">
-            <h2>Encuéntranos</h2>
+            <h2 class="section-title">Encuéntranos</h2>
             <div class="contact-grid">
-                <div class="contact-info">
+                <div class="contact-card">
                     <h3>📍 Ubicación</h3>
                     <p>Cala d'Or, Mallorca</p>
                     <p>07660 Cala d'Or</p>
                 </div>
-                <div class="contact-info">
+                <div class="contact-card">
                     <h3>📞 Contacto</h3>
                     <p>+34 971 XXX XXX</p>
                     <p>info@donor.com</p>
                 </div>
-                <div class="contact-info">
+                <div class="contact-card">
                     <h3>🕐 Horarios</h3>
-                    <p>Lunes - Jueves: 13:00 - 23:00</p>
-                    <p>Viernes - Domingo: 13:00 - 00:00</p>
+                    <p>Lun-Jue: 13:00 - 23:00</p>
+                    <p>Vie-Dom: 13:00 - 00:00</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <p>Don Or © 2026 | Dioxyz</p>
+        <p>Don Or © 2026 | Cocina Mediterránea en Cala d'Or</p>
+        <p class="footer-note">Potenciado por Dioxyz - IA para Restaurantes</p>
     </footer>
 
     <script src="./app.js"></script>
